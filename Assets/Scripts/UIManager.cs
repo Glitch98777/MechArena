@@ -206,16 +206,16 @@ public class UIManager : MonoBehaviour
 
         CreditPill(menuPanel.transform, 0);
 
-        // rank badge (bottom-right)
-        var rp = Rect("RankBadge", menuPanel.transform, new Vector2(1, 0), new Vector2(444, 128), new Vector2(-242, 150));
-        Img(rp, new Color(0.10f, 0.12f, 0.17f, 0.92f), true);
-        var circ = Rect("RCircle", rp, new Vector2(0, 0.5f), new Vector2(90, 90), new Vector2(66, 0));
+        // rank badge (bottom-right): circle | (RANK + XP on top row) / tier / xp bar
+        var rp = Rect("RankBadge", menuPanel.transform, new Vector2(1, 0), new Vector2(476, 140), new Vector2(-258, 152));
+        Img(rp, new Color(0.10f, 0.12f, 0.17f, 0.94f), true);
+        var circ = Rect("RCircle", rp, new Vector2(0, 0.5f), new Vector2(96, 96), new Vector2(70, 0));
         rankCircle = circ.gameObject.AddComponent<Image>(); rankCircle.sprite = CircleSprite(); rankCircle.color = Accent;
-        rankLevel = Label(circ, "1", 44, Color.white, TextAnchor.MiddleCenter, new Vector2(0.5f, 0.5f), new Vector2(90, 60), Vector2.zero, FontStyle.Bold);
-        Label(rp, "RANK", 15, Dim, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(120, 20), new Vector2(128, -16));
-        rankTier = Label(rp, "RECRUIT", 27, TextCol, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(230, 32), new Vector2(128, -36), FontStyle.Bold);
-        rankXpText = Label(rp, "0 / 120 XP", 15, Dim, TextAnchor.MiddleRight, new Vector2(1, 1), new Vector2(200, 20), new Vector2(-16, -42));
-        var xbg = Rect("xbg", rp, new Vector2(0, 0), new Vector2(300, 14), new Vector2(280, 26)); Img(xbg, new Color(0.04f, 0.05f, 0.07f, 1f), true);
+        rankLevel = Label(circ, "1", 44, Color.white, TextAnchor.MiddleCenter, new Vector2(0.5f, 0.5f), new Vector2(96, 64), Vector2.zero, FontStyle.Bold);
+        Label(rp, "RANK", 15, Dim, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(90, 20), new Vector2(138, -16));       // top-left
+        rankXpText = Label(rp, "0 / 120 XP", 15, Dim, TextAnchor.UpperRight, new Vector2(1, 1), new Vector2(250, 20), new Vector2(-20, -16)); // top-right
+        rankTier = Label(rp, "RECRUIT", 27, TextCol, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(320, 32), new Vector2(138, -42), FontStyle.Bold);  // own line
+        var xbg = Rect("xbg", rp, new Vector2(0, 0), new Vector2(300, 14), new Vector2(288, 24)); Img(xbg, new Color(0.04f, 0.05f, 0.07f, 1f), true);
         rankXpFill = Rect("xf", xbg, new Vector2(0, 0.5f), new Vector2(300, 14), Vector2.zero); rankXpFill.pivot = new Vector2(0, 0.5f); rankXpFill.anchoredPosition = new Vector2(-150, 0); Img(rankXpFill, Accent, true);
     }
 
