@@ -193,7 +193,7 @@ public class UIManager : MonoBehaviour
         Label(menuPanel.transform, "MECH", 110, TextCol, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(700, 130), new Vector2(410, -70), FontStyle.Bold);
         Label(menuPanel.transform, "ARENA", 110, Accent, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(700, 130), new Vector2(420, -180), FontStyle.Bold);
         var underline = Rect("UL", menuPanel.transform, new Vector2(0, 1), new Vector2(360, 6), new Vector2(430, -290)); Img(underline, Accent2);
-        Label(menuPanel.transform, "TACTICAL MECH COMBAT  •  PROTOTYPE", 22, Dim, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(700, 30), new Vector2(432, -310));
+        Label(menuPanel.transform, "TACTICAL MECH COMBAT", 22, Dim, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(700, 30), new Vector2(432, -310));
 
         // buttons (lower-left column)
         Btn(menuPanel.transform, "PLAY", new Vector2(360, 84), new Vector2(0, 0), new Vector2(410, 360), Accent2, () => GameManager.Instance.StartBattle(), 40);
