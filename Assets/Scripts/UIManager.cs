@@ -212,10 +212,11 @@ public class UIManager : MonoBehaviour
         var circ = Rect("RCircle", rp, new Vector2(0, 0.5f), new Vector2(96, 96), new Vector2(70, 0));
         rankCircle = circ.gameObject.AddComponent<Image>(); rankCircle.sprite = CircleSprite(); rankCircle.color = Accent;
         rankLevel = Label(circ, "1", 44, Color.white, TextAnchor.MiddleCenter, new Vector2(0.5f, 0.5f), new Vector2(96, 64), Vector2.zero, FontStyle.Bold);
-        Label(rp, "RANK", 15, Dim, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(90, 20), new Vector2(138, -16));       // top-left
-        rankXpText = Label(rp, "0 / 120 XP", 15, Dim, TextAnchor.UpperRight, new Vector2(1, 1), new Vector2(250, 20), new Vector2(-20, -16)); // top-right
-        rankTier = Label(rp, "RECRUIT", 27, TextCol, TextAnchor.UpperLeft, new Vector2(0, 1), new Vector2(320, 32), new Vector2(138, -42), FontStyle.Bold);  // own line
-        var xbg = Rect("xbg", rp, new Vector2(0, 0), new Vector2(300, 14), new Vector2(288, 24)); Img(xbg, new Color(0.04f, 0.05f, 0.07f, 1f), true);
+        // text stacked + centered in the area right of the circle (x-offset +59 = centre of x118..476)
+        Label(rp, "RANK", 15, Dim, TextAnchor.MiddleCenter, new Vector2(0.5f, 1), new Vector2(340, 18), new Vector2(59, -13));
+        rankTier = Label(rp, "RECRUIT", 28, TextCol, TextAnchor.MiddleCenter, new Vector2(0.5f, 1), new Vector2(340, 34), new Vector2(59, -44), FontStyle.Bold);
+        rankXpText = Label(rp, "0 / 120 XP", 15, Dim, TextAnchor.MiddleCenter, new Vector2(0.5f, 0), new Vector2(340, 18), new Vector2(59, 42));
+        var xbg = Rect("xbg", rp, new Vector2(0, 0), new Vector2(300, 14), new Vector2(288, 22)); Img(xbg, new Color(0.04f, 0.05f, 0.07f, 1f), true);
         rankXpFill = Rect("xf", xbg, new Vector2(0, 0.5f), new Vector2(300, 14), Vector2.zero); rankXpFill.pivot = new Vector2(0, 0.5f); rankXpFill.anchoredPosition = new Vector2(-150, 0); Img(rankXpFill, Accent, true);
     }
 
