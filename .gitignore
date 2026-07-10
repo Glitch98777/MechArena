@@ -1,0 +1,38 @@
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/.utmp/
+/utmp/
+*.o
+*.obj
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+.vs/
+.idea/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# Build outputs / large binaries
+*.apk
+*.aab
+*.apkm
+
+# Signing (NEVER publish the keystore)
+*.keystore
+*.jks
+
+# OS
+.DS_Store
+Thumbs.db
+
+# release helper
+.buildnum
+.relnotes.tmp
